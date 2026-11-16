@@ -1,30 +1,118 @@
-/*Muhammad Khan Gillani
-  26i-3285
-  SE-C
-  Lab 11*/
+/* Family Paws - Lab 12
+   Based on the original Lab 11 colours and font */
 
 body {
-  background-color: #d0ff00;
-  font-family: Arial, sans-serif;
-  text-align: center;
+    background-color: #d0ff00;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
 }
 
 h1 {
-  color: rgb(4, 20, 248);
-  text-align: center;
-  font-size: xx-large;
+    color: rgb(4, 20, 248);
+    text-align: center;
+    font-size: xx-large;
 }
- h3 {
-    color : rgb(0, 162, 255)
- }
+
+h2 {
+    color: rgb(4, 20, 248);
+}
+
+h3 {
+    color: rgb(0, 162, 255);
+}
+
+nav {
+    margin: 20px 0;
+}
+
+nav a {
+    display: inline-block;
+    margin: 6px;
+    padding: 8px 12px;
+    color: blue;
+    border: 1px solid red;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: #ffffff;
+}
+
+main {
+    max-width: 1000px;
+    margin: auto;
+}
+
+section {
+    margin: 25px auto;
+    padding: 15px;
+}
 
 table {
-  width: 100%;
-  border-collapse: collapse;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
 }
 
 th, td {
-  border: 1px solid #ff0000; 
-  text-align: left;
-  padding: 8px;
+    border: 1px solid #ff0000;
+    text-align: left;
+    padding: 8px;
+}
+
+.pet-profile img {
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+}
+
+button {
+    padding: 10px 18px;
+    margin: 10px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+}
+
+.center-list {
+    display: inline-block;
+    text-align: left;
+}
+
+.pet-placeholder {
+    font-size: 100px;
+    margin: 15px;
+}
+
+form {
+    max-width: 500px;
+    margin: auto;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+}
+
+input, textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    font-family: Arial, sans-serif;
+}
+
+form button {
+    display: block;
+    margin: 15px auto;
+}
+
+footer {
+    margin-top: 35px;
+    padding: 10px;
 }

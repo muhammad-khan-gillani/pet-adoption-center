@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Family Paws</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Family Paws</h1>
+        <h3>Where Every Paw is Precious</h3>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="pets.html">Available Pets</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Contact Family Paws</h2>
+        <p>Have a question about adoption? Send us a message!</p>
+
+        <section>
+            <h2>Contact Information</h2>
+            <p>Email: hello@familypaws.example</p>
+            <p>Phone: 000-000-0000 (sample number)</p>
+        </section>
+
+        <section>
+            <h2>Send a Message</h2>
+            <form id="contactForm">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+            <p id="formMessage" aria-live="polite"></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Family Paws | Where Every Paw is Precious</p>
+    </footer>
+    <script>
+        // Simple front-end form validation and confirmation.
+        // This form does not send data to an email server.
+        document.addEventListener("DOMContentLoaded", function () {
+            const contactForm = document.getElementById("contactForm");
+
+            if (contactForm) {
+                contactForm.addEventListener("submit", function (event) {
+                    event.preventDefault();
+
+                    const name = document.getElementById("name").value.trim();
+                    const formMessage = document.getElementById("formMessage");
+
+                    if (name === "") {
+                        formMessage.textContent = "Please enter your name.";
+                        return;
+                    }
+
+                    formMessage.textContent = "Thank you, " + name + "! Your message is ready.";
+                    alert("Thank you for contacting Family Paws, " + name + "!");
+                    contactForm.reset();
+                });
+            }
+        });
+    </script>
+</body>
+</html>

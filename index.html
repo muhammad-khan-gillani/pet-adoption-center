@@ -1,34 +1,44 @@
-<!--Muhammad Khan Gillani
-    26i-3285
-    SE-C
-    Lab 11-->
 <!DOCTYPE html>
-<html>
-    <body>
-        <link rel="stylesheet" href="styles.css">
-        <title>Family Paws</title>
-        <h1>Welcome to Family Paws</h1>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Family Paws</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Family Paws</h1>
         <h3>Where Every Paw is Precious</h3>
-        <table>
-  <tr>
-    <th>Pet Name</th>
-    <th>Pet Age</th>
-    <th>Pet Breed</th>
-  </tr>
-  <tr>
-    <td>Candy</td>
-    <td>1 year</td>
-    <td>American Bobtail</td>
-  </tr>
-</table>
-<img src="images\cat.jpg" alt="Candy" style="float: left; ">
-<button type="button" onclick="sayHello()">Adopt Candy</button>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="pets.html">Available Pets</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Welcome to Family Paws!</h2>
+        <p>Meet our lovely pets and help them find a caring home.</p>
 
-<script>
-function sayHello() {
-    alert("Yayyyy Thank You for Adopting Candy!!");
-  }
-</script>
-
-    </body>
+        <section class="pet-profile">
+            <h2>Meet Candy</h2>
+            <img src="images/cat.jpg" alt="Candy, a fluffy cream-colored cat">
+            <table>
+                <tr><th>Pet Name</th><th>Pet Age</th><th>Pet Breed</th></tr>
+                <tr><td>Candy</td><td>1 year</td><td>American Bobtail</td></tr>
+            </table>
+            <p>Candy is a sweet and friendly cat waiting for a loving family.</p>
+            <button type="button" onclick="adoptPet('Candy')">Adopt Candy</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Family Paws | Where Every Paw is Precious</p>
+    </footer>
+    <script>
+        function adoptPet(petName) {
+            alert("Yayyyy! Thank you for choosing to adopt " + petName + "!");
+        }
+    </script>
+</body>
 </html>
