@@ -1,50 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Family Paws</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Family Paws</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Family Paws</h1>
-        <h3>Where Every Paw is Precious</h3>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="pets.html">Available Pets</a>
-            <a href="contact.html">Contact Us</a>
-        </nav>
-    </header>
-    <main>
-        <h2>About Family Paws</h2>
-        <p>Family Paws is a pet adoption website created to celebrate animals and encourage responsible adoption.</p>
-
-        <section>
-            <h2>Our Mission</h2>
-            <p>Our mission is to help pets find safe, caring, and loving homes.</p>
-        </section>
-        <section>
-            <h2>Our Vision</h2>
-            <p>We imagine a world where every pet is treated with kindness and care.</p>
-        </section>
-        <section>
-            <h2>Why Adopt a Pet?</h2>
-            <ul class="center-list">
-                <li>Give an animal a loving home.</li>
-                <li>Build a special bond with a companion.</li>
-                <li>Encourage kindness and responsible pet care.</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Pet Care Reminder</h2>
-            <p>Pets need fresh water, nutritious food, exercise, attention, and regular veterinary care.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2026 Family Paws | Where Every Paw is Precious</p>
-    </footer>
-    <script src="script.js"></script>
-</body>
-</html>
+<header class="site-header">
+  <a class="brand" href="index.html"><span class="brand-paw">🐾</span><span><strong>Family Paws</strong><small>Where Every Paw is Precious</small></span></a>
+  <button class="menu-toggle" aria-label="Toggle navigation" onclick="toggleMenu()">☰</button>
+  <nav id="mainNav">
+    <a href="index.html">Home</a><a href="about.html">About Us</a><a href="pets.html">Available Pets</a><a href="contact.html">Contact Us</a>
+  </nav>
+</header>
+<main class="page-main"><section class="page-intro"><span class="eyebrow">A home for happy tails</span><h1>About <span>Family Paws</span></h1><p>We’re here to make the journey to a loving home a little easier—for pets and people.</p></section>
+<section class="about-layout"><img class="about-photo" src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1000&q=80" alt="A dog and cat relaxing together"><div><span class="eyebrow">Why we’re here</span><h2>Love makes a family.</h2><p>Family Paws is a student-created pet adoption website with one simple idea: every animal deserves care, comfort, and a chance to belong.</p><p>We share pet profiles and encourage visitors to learn about adoption before welcoming a companion home.</p></div></section>
+<section class="three-points"><article><span>💚</span><h2>Our mission</h2><p>Connect adorable pets with caring families and promote responsible adoption.</p></article><article><span>🌼</span><h2>Our vision</h2><p>A kinder world where every pet is safe, loved, and treated with respect.</p></article><article><span>🐾</span><h2>Our values</h2><p>Compassion, patience, honesty, and lifelong commitment to animal care.</p></article></section>
+<section class="photo-gallery"><span class="eyebrow">Our furry inspiration</span><h2>So many reasons to smile</h2><div class="gallery-grid">
+<img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=700&q=80" alt="Cat relaxing">
+<img src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=700&q=80" alt="Golden retriever">
+<img src="https://images.unsplash.com/photo-1425082661705-1834bfd09dca?auto=format&fit=crop&w=700&q=80" alt="Rabbit resting">
+</div></section>
+<section class="tip-box"><h2>Before adopting, remember…</h2><ul><li>Pets need time, attention, and patience.</li><li>Plan for food, grooming, and veterinary care.</li><li>Choose a pet that fits your home and lifestyle.</li></ul></section><a class="button" href="pets.html">Meet our pets →</a></main><footer><p>🐾 &copy; 2026 Family Paws · Where Every Paw is Precious</p><a href="index.html">Back to top ↑</a></footer>
+<script>
+function toggleMenu(){document.getElementById("mainNav").classList.toggle("open");}
+function adoptPet(pet){document.getElementById("adoptModalPet").textContent=pet;document.getElementById("adoptModal").classList.add("show");}
+function closeAdopt(){document.getElementById("adoptModal").classList.remove("show");}
+</script>
+</body></html>

@@ -1,44 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Family Paws</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Family Paws</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Family Paws</h1>
-        <h3>Where Every Paw is Precious</h3>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="pets.html">Available Pets</a>
-            <a href="contact.html">Contact Us</a>
-        </nav>
-    </header>
-    <main>
-        <h2>Welcome to Family Paws!</h2>
-        <p>Meet our lovely pets and help them find a caring home.</p>
-
-        <section class="pet-profile">
-            <h2>Meet Candy</h2>
-            <img src="images/cat.jpg" alt="Candy, a fluffy cream-colored cat">
-            <table>
-                <tr><th>Pet Name</th><th>Pet Age</th><th>Pet Breed</th></tr>
-                <tr><td>Candy</td><td>1 year</td><td>American Bobtail</td></tr>
-            </table>
-            <p>Candy is a sweet and friendly cat waiting for a loving family.</p>
-            <button type="button" onclick="adoptPet('Candy')">Adopt Candy</button>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2026 Family Paws | Where Every Paw is Precious</p>
-    </footer>
-    <script>
-        function adoptPet(petName) {
-            alert("Yayyyy! Thank you for choosing to adopt " + petName + "!");
-        }
-    </script>
-</body>
-</html>
+<header class="site-header">
+  <a class="brand" href="index.html"><span class="brand-paw">🐾</span><span><strong>Family Paws</strong><small>Where Every Paw is Precious</small></span></a>
+  <button class="menu-toggle" aria-label="Toggle navigation" onclick="toggleMenu()">☰</button>
+  <nav id="mainNav">
+    <a href="index.html">Home</a><a href="about.html">About Us</a><a href="pets.html">Available Pets</a><a href="contact.html">Contact Us</a>
+  </nav>
+</header>
+<main>
+<section class="hero">
+  <div class="hero-copy"><span class="eyebrow">A little love changes everything</span><h1>Adopt. Love.<br><span>Care.</span></h1><p>Every pet deserves a safe place, a kind heart, and a family to call their own.</p><a class="button" href="pets.html">Meet our pets <span>→</span></a></div>
+  <div class="hero-photo"><img src="images/cat.jpg" alt="Candy, our fluffy cream cat"><span class="photo-note">Say hello to Candy! ♡</span></div>
+</section>
+<section class="values"><article><span>🏡</span><div><h3>Find a loving home</h3><p>Make a difference, one paw at a time.</p></div></article><article><span>💛</span><div><h3>Care comes first</h3><p>Kindness and responsible adoption matter.</p></div></article><article><span>🐾</span><div><h3>Join our family</h3><p>Help create happier lives for pets.</p></div></article></section>
+<section class="home-grid"><article class="mission-card"><div><span class="eyebrow">Our little promise</span><h2>Every paw is precious.</h2><p>At Family Paws, we believe pets are more than animals—they’re family. We want to help caring people discover a companion who makes their days brighter.</p><a class="text-link" href="about.html">Our story <span>→</span></a></div><div class="mission-emoji">🐱<span>♡</span></div></article>
+<section class="featured"><div class="section-heading"><div><span class="eyebrow">Looking for a friend?</span><h2>Meet the pets</h2></div><a class="text-link" href="pets.html">View all →</a></div>
+<div class="pet-cards"><article class="pet-card"><img src="images/cat.jpg" alt="Candy the cat"><div class="pet-info"><h3>Candy</h3><p>1 year · American Bobtail</p><button class="small-button" onclick="adoptPet('Candy')">I’m interested</button></div></article>
+<article class="pet-card"><img src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=700&q=80" alt="Max, a golden retriever"><div class="pet-info"><h3>Max</h3><p>2 years · Golden Retriever</p><button class="small-button" onclick="adoptPet('Max')">I’m interested</button></div></article>
+<article class="pet-card"><img src="https://images.unsplash.com/photo-1583301286816-f4f05e1e8bf7?auto=format&fit=crop&w=700&q=80" alt="Coco the rabbit"><div class="pet-info"><h3>Coco</h3><p>6 months · Rabbit</p><button class="small-button" onclick="adoptPet('Coco')">I’m interested</button></div></article></div></section></section>
+<section class="photo-gallery"><div class="section-heading"><div><span class="eyebrow">Little moments, big love</span><h2>Life with pets</h2></div></div>
+<div class="gallery-grid">
+<img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=700&q=80" alt="A happy dog outdoors">
+<img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=700&q=80" alt="A curious cat">
+<img src="https://images.unsplash.com/photo-1425082661705-1834bfd09dca?auto=format&fit=crop&w=700&q=80" alt="A small rabbit">
+<img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=700&q=80" alt="A friendly dog">
+</div></section>
+<section class="callout"><h2>Ready to make a friend for life?</h2><p>Your next best friend might be waiting right here.</p><a class="button button-light" href="contact.html">Let’s talk adoption</a></section>
+</main><div id="adoptModal" class="modal" role="dialog" aria-modal="true"><div class="modal-box"><button class="modal-close" onclick="closeAdopt()" aria-label="Close">×</button><div class="paw-large">🐾</div><h2>Great choice!</h2><p>You’re interested in <strong id="adoptModalPet">this pet</strong>.</p><p>Visit our Contact page to tell us more about your home and how you can give a pet a loving family.</p><a class="button" href="contact.html">Contact Family Paws</a></div></div><footer><p>🐾 &copy; 2026 Family Paws · Where Every Paw is Precious</p><a href="index.html">Back to top ↑</a></footer>
+<script>
+function toggleMenu(){document.getElementById("mainNav").classList.toggle("open");}
+function adoptPet(pet){document.getElementById("adoptModalPet").textContent=pet;document.getElementById("adoptModal").classList.add("show");}
+function closeAdopt(){document.getElementById("adoptModal").classList.remove("show");}
+</script>
+</body></html>

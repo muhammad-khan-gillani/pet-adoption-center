@@ -1,64 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Available Pets | Family Paws</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Available Pets | Family Paws</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Family Paws</h1>
-        <h3>Where Every Paw is Precious</h3>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="pets.html">Available Pets</a>
-            <a href="contact.html">Contact Us</a>
-        </nav>
-    </header>
-    <main>
-        <h2>Our Available Pets</h2>
-        <p>Meet some friendly pets looking for a forever home.</p>
-
-        <section class="pet-profile">
-            <h2>Candy</h2>
-            <img src="images/cat.jpg" alt="Candy the cat">
-            <table>
-                <tr><th>Name</th><th>Age</th><th>Breed</th><th>Personality</th></tr>
-                <tr><td>Candy</td><td>1 year</td><td>American Bobtail</td><td>Sweet and friendly</td></tr>
-            </table>
-            <button type="button" onclick="adoptPet('Candy')">Adopt Candy</button>
-        </section>
-
-        <section class="pet-profile">
-            <h2>Max</h2>
-            <div class="pet-placeholder">🐶</div>
-            <table>
-                <tr><th>Name</th><th>Age</th><th>Breed</th><th>Personality</th></tr>
-                <tr><td>Max</td><td>2 years</td><td>Golden Retriever</td><td>Playful and loyal</td></tr>
-            </table>
-            <button type="button" onclick="adoptPet('Max')">Adopt Max</button>
-        </section>
-
-        <section class="pet-profile">
-            <h2>Coco</h2>
-            <div class="pet-placeholder">🐰</div>
-            <table>
-                <tr><th>Name</th><th>Age</th><th>Breed</th><th>Personality</th></tr>
-                <tr><td>Coco</td><td>6 months</td><td>Rabbit</td><td>Gentle and curious</td></tr>
-            </table>
-            <button type="button" onclick="adoptPet('Coco')">Adopt Coco</button>
-        </section>
-        <p><small>Max and Coco are sample profiles for this student website.</small></p>
-    </main>
-    <footer>
-        <p>&copy; 2026 Family Paws | Where Every Paw is Precious</p>
-    </footer>
-    <script>
-        function adoptPet(petName) {
-            alert("Yayyyy! Thank you for choosing to adopt " + petName + "!");
-        }
-    </script>
-</body>
-</html>
+<header class="site-header">
+  <a class="brand" href="index.html"><span class="brand-paw">🐾</span><span><strong>Family Paws</strong><small>Where Every Paw is Precious</small></span></a>
+  <button class="menu-toggle" aria-label="Toggle navigation" onclick="toggleMenu()">☰</button>
+  <nav id="mainNav">
+    <a href="index.html">Home</a><a href="about.html">About Us</a><a href="pets.html">Available Pets</a><a href="contact.html">Contact Us</a>
+  </nav>
+</header>
+<main class="page-main"><section class="page-intro"><span class="eyebrow">Your new best friend</span><h1>Meet our <span>pets</span></h1><p>Every personality is different. Take a look and see who feels like family.</p></section>
+<div class="filters" aria-label="Filter pets"><button class="filter active" onclick="filterPets('all',this)">All pets</button><button class="filter" onclick="filterPets('cat',this)">Cats</button><button class="filter" onclick="filterPets('dog',this)">Dogs</button><button class="filter" onclick="filterPets('rabbit',this)">Rabbits</button></div>
+<section class="pet-grid" id="petGrid">
+<article class="pet-card large" data-kind="cat"><img src="images/cat.jpg" alt="Candy, fluffy cream cat"><div class="pet-info"><span class="pet-tag">Cat · Friendly</span><h2>Candy</h2><p>1 year · American Bobtail</p><p>A gentle, fluffy sweetheart who would love a cozy spot by your window.</p><button class="small-button" onclick="adoptPet('Candy')">Meet Candy</button></div></article>
+<article class="pet-card large" data-kind="dog"><img src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=800&q=80" alt="Max the golden retriever"><div class="pet-info"><span class="pet-tag">Dog · Playful</span><h2>Max</h2><p>2 years · Golden Retriever</p><p>A cheerful buddy who enjoys walks, games, and being around people.</p><button class="small-button" onclick="adoptPet('Max')">Meet Max</button></div></article>
+<article class="pet-card large" data-kind="rabbit"><img src="https://images.unsplash.com/photo-1583301286816-f4f05e1e8bf7?auto=format&fit=crop&w=800&q=80" alt="Coco the rabbit"><div class="pet-info"><span class="pet-tag">Rabbit · Curious</span><h2>Coco</h2><p>6 months · Rabbit</p><p>A curious little explorer who needs a calm, safe space.</p><button class="small-button" onclick="adoptPet('Coco')">Meet Coco</button></div></article></section>
+<p class="note">Max and Coco are sample profiles for this student project.</p></main><div id="adoptModal" class="modal" role="dialog" aria-modal="true"><div class="modal-box"><button class="modal-close" onclick="closeAdopt()" aria-label="Close">×</button><div class="paw-large">🐾</div><h2>Great choice!</h2><p>You’re interested in <strong id="adoptModalPet">this pet</strong>.</p><p>Visit our Contact page to tell us more about your home and how you can give a pet a loving family.</p><a class="button" href="contact.html">Contact Family Paws</a></div></div><script>
+function filterPets(kind,button){document.querySelectorAll(".filter").forEach(b=>b.classList.remove("active"));button.classList.add("active");document.querySelectorAll("#petGrid .pet-card").forEach(card=>{card.style.display=(kind==="all"||card.dataset.kind===kind)?"":"none";});}
+</script><footer><p>🐾 &copy; 2026 Family Paws · Where Every Paw is Precious</p><a href="index.html">Back to top ↑</a></footer>
+<script>
+function toggleMenu(){document.getElementById("mainNav").classList.toggle("open");}
+function adoptPet(pet){document.getElementById("adoptModalPet").textContent=pet;document.getElementById("adoptModal").classList.add("show");}
+function closeAdopt(){document.getElementById("adoptModal").classList.remove("show");}
+</script>
+</body></html>

@@ -1,79 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Family Paws</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Family Paws</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Family Paws</h1>
-        <h3>Where Every Paw is Precious</h3>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="pets.html">Available Pets</a>
-            <a href="contact.html">Contact Us</a>
-        </nav>
-    </header>
-    <main>
-        <h2>Contact Family Paws</h2>
-        <p>Have a question about adoption? Send us a message!</p>
-
-        <section>
-            <h2>Contact Information</h2>
-            <p>Email: hello@familypaws.example</p>
-            <p>Phone: 000-000-0000 (sample number)</p>
-        </section>
-
-        <section>
-            <h2>Send a Message</h2>
-            <form id="contactForm">
-                <label for="name">Your Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Your Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="subject">Subject:</label>
-                <input type="text" id="subject" name="subject" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-
-                <button type="submit">Send Message</button>
-            </form>
-            <p id="formMessage" aria-live="polite"></p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2026 Family Paws | Where Every Paw is Precious</p>
-    </footer>
-    <script>
-        // Simple front-end form validation and confirmation.
-        // This form does not send data to an email server.
-        document.addEventListener("DOMContentLoaded", function () {
-            const contactForm = document.getElementById("contactForm");
-
-            if (contactForm) {
-                contactForm.addEventListener("submit", function (event) {
-                    event.preventDefault();
-
-                    const name = document.getElementById("name").value.trim();
-                    const formMessage = document.getElementById("formMessage");
-
-                    if (name === "") {
-                        formMessage.textContent = "Please enter your name.";
-                        return;
-                    }
-
-                    formMessage.textContent = "Thank you, " + name + "! Your message is ready.";
-                    alert("Thank you for contacting Family Paws, " + name + "!");
-                    contactForm.reset();
-                });
-            }
-        });
-    </script>
-</body>
-</html>
+<header class="site-header">
+  <a class="brand" href="index.html"><span class="brand-paw">🐾</span><span><strong>Family Paws</strong><small>Where Every Paw is Precious</small></span></a>
+  <button class="menu-toggle" aria-label="Toggle navigation" onclick="toggleMenu()">☰</button>
+  <nav id="mainNav">
+    <a href="index.html">Home</a><a href="about.html">About Us</a><a href="pets.html">Available Pets</a><a href="contact.html">Contact Us</a>
+  </nav>
+</header>
+<main class="page-main"><section class="page-intro"><span class="eyebrow">We’d love to hear from you</span><h1>Say <span>hello!</span></h1><p>Interested in a pet or have a question? Send us a message.</p></section>
+<div class="contact-banner"><img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?auto=format&fit=crop&w=1200&q=80" alt="Pets waiting for care"><p>Every message brings us one step closer to a loving home. 🐾</p></div><section class="contact-layout"><aside class="contact-side"><div class="contact-icon">💌</div><h2>Let’s find your new friend.</h2><p>Tell us a little about yourself and the pet you’re interested in. We’ll be happy to help you take the next step.</p><div class="contact-detail"><strong>Email</strong><span>hello@familypaws.example</span></div><div class="contact-detail"><strong>Phone</strong><span>000-000-0000 (sample)</span></div><small>These are sample contact details for this project.</small></aside>
+<form id="contactForm" class="contact-form"><h2>Send a message</h2><label for="name">Your name</label><input id="name" name="name" type="text" placeholder="e.g. Alex" required>
+<label for="email">Email address</label><input id="email" name="email" type="email" placeholder="you@example.com" required>
+<label for="subject">I’m interested in</label><select id="subject" name="subject" required><option value="">Choose one…</option><option>Adopting Candy</option><option>Adopting Max</option><option>Adopting Coco</option><option>General question</option></select>
+<label for="message">Your message</label><textarea id="message" name="message" rows="5" placeholder="Tell us a little more…" required></textarea><button class="button" type="submit">Send message →</button><p id="formMessage" aria-live="polite"></p></form></section></main>
+<script>
+document.getElementById("contactForm").addEventListener("submit",function(event){event.preventDefault();const name=document.getElementById("name").value.trim();const msg=document.getElementById("formMessage");if(!name){msg.textContent="Please enter your name.";return;}msg.textContent="Thanks, "+name+"! Your message has been prepared. (Demo form—nothing is sent.)";this.reset();});
+</script><footer><p>🐾 &copy; 2026 Family Paws · Where Every Paw is Precious</p><a href="index.html">Back to top ↑</a></footer>
+<script>
+function toggleMenu(){document.getElementById("mainNav").classList.toggle("open");}
+function adoptPet(pet){document.getElementById("adoptModalPet").textContent=pet;document.getElementById("adoptModal").classList.add("show");}
+function closeAdopt(){document.getElementById("adoptModal").classList.remove("show");}
+</script>
+</body></html>
