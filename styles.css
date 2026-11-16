@@ -1,0 +1,30 @@
+/*Muhammad Khan Gillani
+  26i-3285
+  SE-C
+  Lab 11*/
+
+body {
+  background-color: #d0ff00;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  color: rgb(4, 20, 248);
+  text-align: center;
+  font-size: xx-large;
+}
+ h3 {
+    color : rgb(0, 162, 255)
+ }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ff0000; 
+  text-align: left;
+  padding: 8px;
+}
